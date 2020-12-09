@@ -1,0 +1,22 @@
+---
+layout: page
+title: "Every stock wallpaper"
+---
+
+<div class="archive">
+  {% assign tags_list = site.categories | sort: title %}
+    {% if tags_list.first[0] == null %}
+      {% for tag in tags_list %}
+        <a href="{{ tag }}">
+          <span class="stockie">{{ tag | downcase }}</span> 
+          <span class="subtle-text">{{ site.tags[tag].size }}</span></a></li>
+      {% endfor %}
+    {% else %}
+      {% for tag in tags_list %}
+        <a href="{{ tag[0] }}">
+          <span class="stockie">{{ tag[0] | downcase }}</span>
+           <span class="subtle-text">{{ tag[1].size }}</span></a>
+      {% endfor %}
+    {% endif %}
+  {% assign tags_list = nil %}
+</div>

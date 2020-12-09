@@ -1,0 +1,43 @@
+<div class="post">
+  <figure>
+    <a href="wallpaper/StockWallpapers/{% if post %}{{ post.img }}{% else %}{{ page.img }}{% endif %}" class="image-link"
+      download>
+      <img src="wallpaper/StockWallpapers/{% if post %}{{ post.img }}{% else %}{{ page.img }}{% endif %}">
+      <div class="download"><span class="desktop">click to save</span></div>
+    </a>
+    <figcaption class="post-info">
+      <ul>
+        <li class="tags">
+          {% if post %}
+          {% assign categories = post.categories %}
+          {% else %}
+          {% assign categories = page.categories %}
+          {% endif %}
+          {% for category in categories %}
+          #<a href="{{ site.baseurl }}/{{ category | slugize }}">{{ category }}</a>
+          {% endfor %}
+        </li>
+        <li>
+          {% if post %}
+          {{ post.era-or-event }}
+          {% else %}
+          {{ page.era-or-event }}
+          {% endif %}
+        </li>
+        {% if post %}
+        {% if post.photo-credit %}
+        <li>
+          <a href="{{ post.photo-credit }}" class="subtle-link">cr</a>
+        </li>
+        {% endif %}
+        {% else %}
+        {% if page.photo-credit %}
+        <li>
+          <a href="{{ page.photo-credit }}" class="subtle-link">cr</a>
+        </li>
+        {% endif %}
+        {% endif %}
+      </ul>
+    </figcaption>
+  </figure>
+</div>

@@ -1,0 +1,4 @@
+---
+tag: iphone
+permalink: /iphone
+---

@@ -1,0 +1,45 @@
+title: stock wallpapers
+author: marvelosian
+description: >-
+  Stockwall papers from all the popular phones
+baseurl: "https://marvelosian.github.io/wallpapers/"
+url: "https://marvelosian.github.io/wallpapers/"
+locale:       en-US
+lang:         en-US
+encoding:     "utf-8"
+
+social_image_path:  assets/meta.jpg
+social_logo_path:   assets/meta.jpg
+
+# Build settings
+markdown: kramdown
+permalink: :categories/:title
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+sass:
+  sass_dir: _scss
+paginate: 12
+paginator_path: ":num"
+
+# Exclude from site build
+exclude:
+  - .DS_Store
+  - node_modules
+  - gulpfile.js
+  - package.json
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# Collections
+collections:
+  category:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "category"
+    values:
+      layout: "category"
