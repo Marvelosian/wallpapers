@@ -4,21 +4,22 @@
   <nav class="pagination">
     {% if paginator %}
     {% if paginator.previous_page %}
-    <a href="https://marvelosian.github.io/wallpapers/{{ paginator.previous_page_path }}" class="prev"><span class="arrow-left">&#10168;</span> PREV</a>
+    <a href="https://marvelosian.github.io/wallpapers/{{ paginator.previous_page_path }}" class="prev">
+      <span class="arrow-left"></span> PREV</a>
     {% else %}
-    <div class="prev disabled"><span class="arrow-left">&#10168;</span> PREV</div>
+    <div class="prev disabled"><span class="arrow-left"></span> PREV</div>
     {% endif %}
     <span class="page-number">{{ paginator.page }} of {{ paginator.total_pages }}</span>
     {% if paginator.next_page %}
-    <a href="https://marvelosian.github.io/wallpapers/{{ paginator.next_page_path }}" class="next">NEXT &#10168;</a>
+    <a href="https://marvelosian.github.io/wallpapers/{{ paginator.next_page_path }}" class="next">NEXT </a>
     {% else %}
-    <span class="next disabled">NEXT &#10168;</span>
+    <span class="next disabled">NEXT </span>
     {% endif %}
     {% endif %}
   </nav>
 
   <p>
-    brought to you by <a href="https://twitter.com/marvelosian">@marvelosian</a>. &hearts;<br>
+    brought to you by <a href="https://twitter.com/marvelosian">@marvelosian</a>.<br>
     <a href="https://marvelosian.github.io/wallpapers/">latest wallpapers</a> / 
     <a href="https://marvelosian.github.io/wallpapers/all">view all tags</a> / 
     <a href="">CATEGORY 3</a> / 
